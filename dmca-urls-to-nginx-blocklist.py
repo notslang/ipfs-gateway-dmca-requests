@@ -1,4 +1,5 @@
 import fileinput
+import sys
 from urllib.parse import urlparse
 
 for line in fileinput.input():
@@ -9,7 +10,11 @@ for line in fileinput.input():
     url = urlparse(line)
     path = url.path.split('/')
 
-    assert path[0] == ''
-    assert path[1] == 'ipfs'
+    try:
+        assert path[0] == ''
+        assert path[1] == 'ipfs'
+        assert path[2] != ''
+    except:
+        print("unable to parse: " + line, file=sys.stderr)
 
     print('location /ipfs/' + path[2] + ' { return 451; }')
