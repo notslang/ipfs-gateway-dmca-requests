@@ -14,7 +14,6 @@ for line in fileinput.input():
         assert path[0] == ''
         assert path[1] == 'ipfs'
         assert path[2] != ''
+        print('location /ipfs/' + path[2] + ' { return 451; }')
     except:
         print("unable to parse: " + line, file=sys.stderr)
-
-    print('location /ipfs/' + path[2] + ' { return 451; }')
