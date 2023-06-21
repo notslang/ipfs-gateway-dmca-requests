@@ -20,6 +20,8 @@ Maybe there's some site out there that has posted links to my gateway (which hav
 
 I'd love to know if other gateway operators have gotten similar takedown requests.
 
+So far I've found one other person running into this issue: https://incoherency.co.uk/blog/stories/hardbin-fake-takedowns.html
+
 ## What is the point of all this?
 
 Honestly, I don't know. Sometimes I think that they just send me these notifications to hassle me and waste my time.
